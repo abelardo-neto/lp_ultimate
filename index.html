@@ -4,32 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>⚡ Energo</title>
   </head>
 
   <body class="bg-default text-gray-700 font-default min-h-screen flex flex-col items-center">
 
-    <header class="max-w-10/12 w-full text-base">
-      <div class="flex items-center justify-between bg-header py-2">
-        <p class="uppercase font-semibold tracking-wide text-gray-600">special internet-only offer</p>
-        <img class="w-[12rem]" src="./assets/logo-white.png" alt="Brand logo" />
-        <div class="header_info flex flex-col md:flex-row justify-between text-right md:gap-4 uppercase font-semibold tracking-wide text-gray-600">
-          <p>questions?</p>
-          <a href="#" class="text-energo underline cursor-pointer">contact us</a>
+    <header class="lg:max-w-10/12 xl:max-w-9/12 w-full lg:text-base">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between bg-header lg:py-2 py-0">
+          <div class="lg:hidden absolute w-full h-15 bg-green-200 z-1 top-25"></div>
+          <p class="uppercase font-semibold lg:tracking-wide text-center tracking-widest text-gray-600 z-10">special internet-only offer</p>
+          <div class="lg:order-last flex lg:justify-between justify-center text-center gap-2 lg:gap-4 uppercase font-semibold tracking-wide text-gray-600 z-10">
+              <p>questions?</p>
+              <a href="#" class="text-energo underline cursor-pointer text-sm">contact us</a>
+            </div>
+            <img class="lg:w-[12rem] w-[14rem] lg:py-4 pt-2 pb-6 order-first lg:order-none hidden lg:block" src="./assets/logo-white.png" alt="Brand logo" />
+            <div class="lg:hidden order-first w-full bg-energo mb-2 z-20 shadow-md/30">
+                <img class="w-[14rem] order-first mx-auto opacity-90 pt-1 pb-3" src="./assets/logo-small-no-bg.png" alt="Brand logo" />
+            </div>
         </div>
-      </div>
     </header>
 
-    <section class="os_container max-w-10/12 w-full grid grid-cols-2 gap-18 mx-auto py-2">
+    <section class="os_container lg:max-w-10/12 xl:max-w-9/12 sm:max-w-9/12 md:max-w-8/12 w-full grid lg:grid-cols-2 grid-cols-1 xl:gap-8 2xl:gap-18 gap-8 mx-auto py-2">
       <!-- Left side: Product image -->
-      <div class="os_container-left bg-red-200">
-        <p>Carrossel</p>
+       <p class="font-raleway font-semibold text-3xl pt-8 text-center lg:hidden">Energo
+            <span class="text-2xl align-bottom font-medium text-energo tracking-tight">
+                original flavor<sup class="text-xs -top-3"> TM</sup>
+            </span>
+        </p>
+      <div class="hidden lg:block os_container-left bg-red-200 w-full lg:h-[30rem] h-[20rem] rounded-2xl relative">  </div>  
+      <div class="lg:hidden os_container-left w-full h-auto max-w-lg aspect-square rounded-2xl px-4 relative mx-auto">
+        <img class="os_carousel-image object-cover aspect-square rounded-2xl" src="./assets/1-box.png" alt="" />
+        <div class="hidden os_carousel-indicators flex justify-center items-center gap-2 absolute bottom-4 left-1/2 transform -translate-x-1/2">
+          <span class="hidden os_carousel-indicator w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+          <span class="hidden os_carousel-indicator w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+          <span class="hidden os_carousel-indicator w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span> </div>
+        <div class="hidden os_carousel-guarantee absolute bottom-4 left-4 bg-blue-700 text-white px-3 py-1 rounded-full text-xs font-bold shadow">
+          90 DAY GUARANTEE 
+        </div>   
       </div>
       <!-- Right side: Product details -->
-      <div class="os_container-right space-y-3 pr-8">
-        <p class="uppercase text-base font-semibold tracking-[.09em] text-gray-600">special internet-only offer up to 45% off</p>
-        <p class="font-raleway font-semibold text-5xl tracking-wi">Energo
+      <div class="os_container-right space-y-3 px-2 md: px-4">
+        <p class="hidden lg:block uppercase xl:text-base lg:text-sm font-semibold tracking-[.09em] lg:text-left text-center text-gray-600">special internet-only offer <br class="lg:hidden">up to 45% off</p>
+        <p class="hidden lg:block font-raleway font-semibold lg:text-5xl">Energo
             <span class="text-4xl align-middle font-medium text-energo tracking-tight">
                 original flavor<sup class="text-xs -top-6">TM</sup>
             </span>
@@ -80,9 +98,9 @@
 
         <p class="text-gray-400 text-base font-medium">Choose your package:</p>
 
-        <form class="os_package flex flex-col justify-around items-center text-sm">
+        <form class="os_package flex flex-col justify-around items-center text-xs md:text-sm">
 
-            <div class="flex justify-around items-center w-full bg-gray-200 rounded-full mb-4 ">
+            <div class="flex justify-around items-center w-full bg-gray-200 rounded-full mb-4 leading-6 font-semibold">
                 
                     <input class="sr-only peer/one-time" type="radio" name="os_package-option" id="one-time" value="One-Time Purchase" checked>
                     <label for="one-time" class="flex text-center justify-center rounded-full p-2 w-1/2 w-full cursor-pointer
@@ -90,7 +108,7 @@
                          peer-checked/one-time:text-white 
                          peer-checked/one-time:border-blue-600 
                          transition-colors duration-200 ease-in-out">
-                        One-Time Purchase
+                       <span><i class="fa-solid fa-box-open"></i> One-Time Purchase</span> 
                     </label>
                 
                     <input class="sr-only peer/subscribe" type="radio" name="os_package-option" id="subscribe" value="Subscribe & Save 10%">
@@ -99,7 +117,7 @@
                          peer-checked/subscribe:text-white 
                          peer-checked/subscribe:border-blue-600
                          transition-colors duration-200 ease-in-out">
-                        Subscribe & Save 10%
+                        <span><i class="fa-solid fa-retweet"></i> Subscribe & Save 10%</span>
                     </label>
             
             </div>
@@ -117,10 +135,10 @@
                 <span class="text-sm">I agree to the <a href="#" class="text-blue-600 underline">Terms & Conditions</a></span>
         </div>
 
-        <button class="os_button w-full bg-orange-300 py-3 rounded-full">
+        <button class="os_button w-full bg-orange-300 py-3 rounded-full cursor-pointer hover:bg-orange-400 transition-colors duration-200 font-semibold text-lg">
             <span class="text-lg font-bold">CLAIM YOUR DISCOUNT - 35% OFF</span>
         </button>
-        <p class="text-center"> Free U.S. shipping over $99</p>
+        <p class="text-center"><i class="fa-solid fa-truck-fast"></i> Free U.S. shipping over $99</p>
 
       </div>
     </section>
