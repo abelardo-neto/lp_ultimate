@@ -44,3 +44,7 @@
   background-color: #CD3E1E;
 }
 
+.slick-slider {
+  /* height: 90%; */
+  align-content: center;
+}

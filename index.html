@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>⚡ Energo</title>
@@ -34,7 +38,18 @@
     <section
         class="os_container 2xl:max-w-7xl lg:max-w-10/12 xl:max-w-9/12 sm:max-w-lg max-w-md w-full grid lg:grid-cols-2 grid-cols-1 xl:gap-8  gap-4 mx-auto py-2">
         <!-- Left side: Product image -->
-        <div class="slider">
+
+        <div class="slider-slick flex">
+            <div class="px-2 py-8"><img class="shadow-lg/40" src="./assets/1-box.png"></div>
+            <div class="px-2 py-8"><img class="shadow-lg/40" src="./assets/3-boxes.png"></div>
+            <div class="px-2 py-8"><img class="shadow-lg/40" src="./assets/6-boxes.png"></div>
+        </div>
+
+
+
+
+
+        <div class="slider hidden">
             <p class="font-raleway font-semibold text-3xl pt-6 pb-2 text-center w-full lg:hidden">Energo
                 <span class="text-2xl align-bottom font-medium text-energo w-full tracking-tight">
                     original flavor<sup class="text-xs -top-3"> TM</sup>
@@ -86,48 +101,74 @@
 
                 <label for="1-box"
                     class="os_label transition-colors duration-200 ease-in-out flex items-center gap-3 border-2 rounded-tr-2xl rounded-tl-2xl border-red-200 pl-4 py-2 pr-2">
-                    <input type="radio" name="os_selector-option" id="1-box" value="1 Box">
+
+                    <input class="peer hidden" type="radio" name="os_selector-option" id="1-box" value="1 Box">
+                    <div
+                        class="px-2 w-5 h-5 rounded-full border-2 border-gray-400 peer-checked:border-red-100 
+        bg-white peer-checked:bg-[#CD3E1E] transition-colors duration-350  peer-checked:ring-1 peer-checked:ring-[#CD3E1E] ">
+                    </div>
                     <div class="flex items-center justify-between gap-3 w-full">
                         <label for="1-box" class="text-left text-xl font-semibold tracking-tight">
                             1 Box<br><span
                                 class="font-redhat text-base font-medium bg-green-200 rounded-full p-1 tracking-wider">SAVE
                                 $20.00</span>
                         </label>
-                        <span class="text-right">
+                        <span class="text-right toggle_otp">
                             <span class="selected_price text-2xl font-bold">$49.95</span><br>
                             <span class="line-through text-lg text-gray-500">$69.95</span>
+                        </span>
+                        <span class="text-right hidden toggle_ss">
+                            <span class="selected_price text-2xl font-bold">$43.96</span><br>
+                            <span class="line-through text-lg text-gray-400">$61.56</span>
                         </span>
                     </div>
                 </label>
 
                 <label for="3-boxes"
                     class="os_label transition-colors duration-200 ease-in-out flex items-center gap-3 border-r-2 border-l-2 border-red-200 pl-4 py-2 pr-2 bg-red-100">
-                    <input type="radio" name="os_selector-option" id="3-boxes" value="3 Boxes" checked>
+                    <input class="peer hidden" type="radio" name="os_selector-option" id="3-boxes" value="3 Boxes"
+                        checked>
+                    <div
+                        class="px-2 w-5 h-5 rounded-full border-2 border-gray-400 peer-checked:border-red-100 
+        bg-white peer-checked:bg-[#CD3E1E] transition-colors duration-350  peer-checked:ring-1 peer-checked:ring-[#CD3E1E] ">
+                    </div>
                     <div class="flex items-center justify-between gap-3 w-full">
                         <label for="3-boxes" class="text-left text-xl font-semibold tracking-tight">
                             3 Boxes<br><span
                                 class="font-redhat text-base font-medium bg-green-200 rounded-full p-1 tracking-wider">SAVE
                                 $75.00</span>
                         </label>
-                        <span class="text-right">
+                        <span class="text-right toggle_otp">
                             <span class="selected_price text-2xl font-bold">$134.85</span><br>
                             <span class="line-through text-lg text-gray-400">$209.85</span>
+                        </span>
+                        <span class="text-right hidden toggle_ss">
+                            <span class="selected_price text-2xl font-bold">$118.67</span><br>
+                            <span class="line-through text-lg text-gray-400">$184.67</span>
                         </span>
                     </div>
                 </label>
 
                 <label for="6-boxes"
                     class="os_label transition-colors duration-200 ease-in-out flex items-center gap-3 border-2 rounded-br-2xl rounded-bl-2xl border-red-200 pl-4 py-2 pr-2">
-                    <input type="radio" name="os_selector-option" id="6-boxes" value="6 Boxes">
+                    <input class="peer hidden" type="radio" name="os_selector-option" id="6-boxes" value="6 Boxes">
+                    <div
+                        class="px-2 w-5 h-5 rounded-full border-2 border-gray-400 peer-checked:border-red-100 
+        bg-white peer-checked:bg-[#CD3E1E] transition-colors duration-350  peer-checked:ring-1 peer-checked:ring-[#CD3E1E] ">
+                    </div>
                     <div class="flex items-center justify-between gap-3 w-full">
                         <label for="6-boxes" class="text-left text-xl font-semibold tracking-tight">
                             6 Boxes<br><span
                                 class="font-redhat text-base font-medium bg-green-200 rounded-full p-1 tracking-wider">SAVE
                                 $165.00</span>
                         </label>
-                        <span class="text-right">
+                        <span class="text-right toggle_otp">
                             <span class="selected_price text-2xl font-bold">$254.70</span><br>
                             <span class="line-through text-lg text-gray-400">$419.70</span>
+                        </span>
+                        <span class="text-right hidden toggle_ss">
+                            <span class="selected_price text-2xl font-bold">$224.14</span><br>
+                            <span class="line-through text-lg text-gray-400">$369.34</span>
                         </span>
                     </div>
                 </label>
@@ -135,17 +176,17 @@
 
             <p class="text-gray-400 text-base font-medium">Choose your package:</p>
 
-            <form class="os_package flex flex-col justify-around items-center text-xs md:text-sm">
+            <form class="os_package flex flex-col justify-around items-center text-xs md:text-sm" id="os_package-form">
 
                 <div
-                    class="flex justify-around items-center w-full bg-gray-200 rounded-full mb-1 leading-6 font-semibold ">
+                    class="flex justify-around items-center w-full bg-gray-200 hover:bg-gray-300 rounded-full mb-1 leading-6 font-semibold transition-colors duration-200 ease-in-out ">
 
                     <input class="sr-only peer/one-time" type="radio" name="os_package-option" id="one-time"
                         value="One-Time Purchase" checked>
                     <label for="one-time" class="flex text-center justify-center rounded-full p-2 w-1/2 w-full cursor-pointer
-                         peer-checked/one-time:bg-blue-600 
+                         peer-checked/one-time:bg-[#CD3E1E] 
                          peer-checked/one-time:text-white 
-                         peer-checked/one-time:border-blue-600 
+                         peer-checked/one-time:border-[#CD3E1E] 
                          transition-colors duration-200 ease-in-out">
                         <span><i class="fa-solid fa-box-open"></i> One-Time Purchase</span>
                     </label>
@@ -153,9 +194,9 @@
                     <input class="sr-only peer/subscribe" type="radio" name="os_package-option" id="subscribe"
                         value="Subscribe & Save 10%">
                     <label for="subscribe" class="flex text-center justify-center rounded-full  p-2 w-1/2 w-full cursor-pointer 
-                         peer-checked/subscribe:bg-blue-600 
+                         peer-checked/subscribe:bg-[#CD3E1E] 
                          peer-checked/subscribe:text-white 
-                         peer-checked/subscribe:border-blue-600
+                         peer-checked/subscribe:border-[#CD3E1E]
                          transition-colors duration-200 ease-in-out">
                         <span><i class="fa-solid fa-retweet"></i> Subscribe & Save 12%</span>
                     </label>
@@ -177,7 +218,7 @@
                 </label>
             </div>
 
-            <a href="#" class="flex w-full justify-center bg-orange-300 py-4 rounded-full cursor-pointer hover:bg-orange-400 transition-colors duration-200 font-semibold text-lg
+            <a href="#" class="flex w-full text-white justify-center bg-[#CD3E1E] py-4 rounded-full cursor-pointer hover:bg-[#77200f] transition-colors duration-200 font-semibold text-lg
          pointer-events-none opacity-50 cursor-not-allowed" id="link_value">
                 <span class="text-lg font-bold" id="button_value"></span>
             </a>
@@ -185,9 +226,11 @@
 
         </div>
     </section>
-    <script src="script.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js" integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
