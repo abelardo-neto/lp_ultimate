@@ -5,10 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>⚡ Energo</title>
@@ -36,21 +40,40 @@
     </header>
 
     <section
-        class="os_container 2xl:max-w-7xl lg:max-w-10/12 xl:max-w-9/12 sm:max-w-lg max-w-md w-full grid lg:grid-cols-2 grid-cols-1 xl:gap-8  gap-4 mx-auto py-2">
+        class="os_container 2xl:max-w-7xl lg:max-w-10/12 xl:max-w-9/12 sm:max-w-lg max-w-md w-full grid lg:grid-cols-2 grid-cols-1 xl:gap-8 2xl:gap-16 gap-4 mx-auto py-2">
         <!-- Left side: Product image -->
+        <p class="font-raleway font-semibold text-3xl pt-6 text-center w-full lg:hidden">Energo
+            <span class="text-2xl align-bottom font-medium text-energo w-full tracking-tight">
+                original flavor<sup class="text-xs -top-3"> TM</sup>
+            </span>
+        </p>
+        <div>
+            <div class="slider-slick slider-for aspect-square rounded-4xl overflow-hidden w-11/12 mx-auto">
+                <div class=""><img class="" src="./assets/1-box.png"></div>
+                <div class=""><img class="" src="./assets/3-boxes.png"></div>
+                <div class=""><img class="" src="./assets/6-boxes.png"></div>
+            </div>
+            <div class="slider-nav flex gap-2 mt-4 w-1/2 justify-center text-center mx-auto px-4">
+                <div
+                    class="thumb w-4 aspect-square object-cover border-4 border-transparent rounded cursor-pointer">
+                    <img class="" src="./assets/1-box.png"></div>
+                <div
+                    class="thumb w-4 aspect-square object-cover border-4 border-transparent rounded cursor-pointer">
+                    <img class="" src="./assets/3-boxes.png"></div>
+                <div
+                    class="thumb w-4 aspect-square object-cover border-4 border-transparent rounded cursor-pointer">
+                    <img class="" src="./assets/6-boxes.png"></div>
+            </div>
 
-        <div class="slider-slick flex">
-            <div class="px-2 py-8"><img class="shadow-lg/40" src="./assets/1-box.png"></div>
-            <div class="px-2 py-8"><img class="shadow-lg/40" src="./assets/3-boxes.png"></div>
-            <div class="px-2 py-8"><img class="shadow-lg/40" src="./assets/6-boxes.png"></div>
         </div>
 
 
 
 
 
+
         <div class="slider hidden">
-            <p class="font-raleway font-semibold text-3xl pt-6 pb-2 text-center w-full lg:hidden">Energo
+            <p class="hidden font-raleway font-semibold text-3xl pt-6 pb-2 text-center w-full lg:hidden">Energo
                 <span class="text-2xl align-bottom font-medium text-energo w-full tracking-tight">
                     original flavor<sup class="text-xs -top-3"> TM</sup>
                 </span>
@@ -226,9 +249,15 @@
 
         </div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js" integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"
+        integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="script.js"></script>
 </body>

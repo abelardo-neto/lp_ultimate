@@ -44,7 +44,18 @@
   background-color: #CD3E1E;
 }
 
-.slick-slider {
-  /* height: 90%; */
-  align-content: center;
+.slick-arrow {
+	z-index: 1;
+	width: 40px;
+	height: 40px;
+}
+
+.slick-arrow:before {
+	font-size: 30px;
+}
+.slick-next {
+	right: 0;
+}
+.slick-prev {
+	left: 0;
 }

@@ -166,12 +166,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Initialize Slick Slider
 $(document).ready(function () {
-  $(".slider-slick").slick({
-     infinite: false,
+  $(".slider-for").slick({
+     infinite: true,
      dots: true,
-     centerMode: true,
-     adaptiveHeight: true
+     centerMode: false,
+     adaptiveHeight: true,
+     arrows: true,
+     
+      asNavFor: '.slider-nav',
+    prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+    nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+     
 
   });
+
+  $('.slider-nav').slick({
+      slidesToShow: 3,
+      asNavFor: '.slider-for',
+      focusOnSelect: true
+    });
+
+function highlightThumbnail(currentSlide) {
+      $('.thumb').removeClass('border-red-500').addClass('border-transparent');
+      $('.thumb').eq(currentSlide).removeClass('border-transparent').addClass('border-red-500');
+    }
+
+    // Ao trocar o slide (com seta ou swipe)
+    $('.slider-for').on('afterChange', function (event, slick, currentSlide) {
+      highlightThumbnail(currentSlide);
+    });
+
+    // Inicia com a primeira miniatura destacada
+    highlightThumbnail(0);
   
 });
+
+
+
+
+// $('.slider-nav > div').click(function() {
+//     $('.slider-slick').slick('slickGoTo',$(this).index());
+// })
